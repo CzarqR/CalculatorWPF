@@ -120,11 +120,10 @@ namespace Calculator
         {
             Stack<double> stack = new Stack<double>();
             string[] s = r.Split(' ');
-            Console.WriteLine(string.Join("|", s.ToArray()));
             double a, b;
             for (int i = 0; i < s.Length; i++)
             {
-                if (double.TryParse(s[i], NumberStyles.Any, new CultureInfo("pl"), out double c)) //number
+                if (double.TryParse(s[i], NumberStyles.Number, new CultureInfo("pl"), out double c)) //number
                 {
                     stack.Push(c);
                 }

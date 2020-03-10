@@ -13,6 +13,7 @@
     Height="500"
     KeyDown="Window_KeyDown"
     TextInput="Window_TextInput"
+    SizeChanged="Window_SizeChanged"
     Width="350">
 
     <Window.Resources>
@@ -36,6 +37,7 @@
             Grid.ColumnSpan="2">
 
             <Border
+                Height="25"
                 Margin="0,0,0,5"
                 DockPanel.Dock="Top"
                 Name="brdEq"
@@ -45,6 +47,7 @@
                 VerticalAlignment="Top">
 
                 <Label
+                    HorizontalContentAlignment="Right"
                     Foreground="#104C91"
                     Name="lblEq"
                     HorizontalAlignment="Right"
@@ -55,10 +58,15 @@
 
             </Border>
 
+            
             <Label
+                Height="40"
+                VerticalAlignment="Stretch"
+                Margin="2,0,2,0"
                 Foreground="#104C91"
                 DockPanel.Dock="Top"
                 Name="lblCurr"
+                HorizontalContentAlignment="Right"
                 FontSize="26"
                 HorizontalAlignment="Right"
                 Content="0">
